@@ -102,11 +102,13 @@ class Instagram:
 
 
 
-    def notification(self):
-        self.driver.find_element_by_xpath(r"//a[@href='/accounts/activity/']").click()
-        time.sleep(10)
-        self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[4]/a').click()
-
+    def logout(self):
+        self.driver.find_element_by_xpath(
+            '//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/span').click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/div[2]/div/div").click()
+        time.sleep(2)
+        
     def like(self):
         self.driver.find_element_by_xpath(
             "//*[@id='react-root']/section/main/section/div/div[3]/div/article[1]/div[3]/section/span[1]/button").click()
