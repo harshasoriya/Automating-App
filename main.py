@@ -25,8 +25,8 @@ while True:
                         n.home()
                     elif "message" in b:
                         n.message()
-                    elif "notification" in b:
-                        n.notification()
+                    elif "log out" in b:
+                        n.logout()
                     elif "feed" in b:
                         n.newsfeed()
                     elif "open" in b:
